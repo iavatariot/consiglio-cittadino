@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createUser, getUserByEmail, isValidEmail, isValidPassword, createEmailVerificationToken } from '../../../../../lib/auth';
-import { rateLimiter, getClientIP } from '../../../../../lib/rateLimiter';
-import { spamDetector } from '../../../../../lib/spamDetector';
-import { emailService } from '../../../../../lib/emailService';
+import { createUser, getUserByEmail, isValidEmail, isValidPassword, createEmailVerificationToken } from '@/lib/auth';
+import { rateLimiter, getClientIP } from '@/lib/rateLimiter';
+import { spamDetector } from '@/lib/spamDetector';
+import { emailService } from '@/lib/emailService';
 import { verificaCodiceFiscale } from '@/lib/codiceFiscale';
 
 export async function POST(request: NextRequest) {

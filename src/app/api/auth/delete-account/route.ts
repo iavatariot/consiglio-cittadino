@@ -5,9 +5,9 @@ import {
   cancelAccountDeletion,
   confirmAccountDeletion,
   verifyDeletionToken
-} from '../../../../../lib/auth';
-import { emailService } from '../../../../../lib/emailService';
-import { rateLimiter, getClientIP } from '../../../../../lib/rateLimiter';
+} from '@/lib/auth';
+import { emailService } from '@/lib/emailService';
+import { rateLimiter, getClientIP } from '@/lib/rateLimiter';
 
 // POST - Request account deletion
 export async function POST(request: NextRequest) {

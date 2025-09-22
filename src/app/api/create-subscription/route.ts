@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { stripe } from '../../../../lib/stripe';
-import { pool } from '../../../../lib/database';
-import { verifySession } from '../../../../lib/auth';
+import { stripe } from '@/lib/stripe';
+import { pool } from '@/lib/database';
+import { verifySession } from '@/lib/auth';
 
 export async function POST(request: NextRequest) {
   try {

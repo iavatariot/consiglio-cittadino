@@ -3,7 +3,7 @@ import { join, dirname } from 'path';
 import { mkdirSync, existsSync } from 'fs';
 
 const dbPath = join(process.cwd(), 'database', 'consiglio.db');
-let db: Database.Database;
+let db: Database.Database | undefined;
 
 function initializeDatabase() {
   try {
@@ -156,16 +156,16 @@ function createTables() {
   ];
 
   // Execute table creation
-  db.exec(createUsersTable);
-  db.exec(createSubscriptionsTable);
-  db.exec(createGeneratedCodesTable);
-  db.exec(createRecoveryTokensTable);
-  db.exec(createSessionsTable);
-  db.exec(createEmailVerificationTable);
-  db.exec(createAccountDeletionTokensTable);
+  db!.exec(createUsersTable);
+  db!.exec(createSubscriptionsTable);
+  db!.exec(createGeneratedCodesTable);
+  db!.exec(createRecoveryTokensTable);
+  db!.exec(createSessionsTable);
+  db!.exec(createEmailVerificationTable);
+  db!.exec(createAccountDeletionTokensTable);
 
   // Execute index creation
-  createIndexes.forEach(index => db.exec(index));
+  createIndexes.forEach(index => db!.exec(index));
 }
 
 // Initialize database
@@ -185,12 +185,12 @@ export const pool = {
 
       if (sqliteQuery.toLowerCase().includes('select')) {
         // SELECT query
-        const stmt = db.prepare(sqliteQuery);
+        const stmt = db!.prepare(sqliteQuery);
         const rows = stmt.all(params);
         return [rows, []];
       } else {
         // INSERT/UPDATE/DELETE query
-        const stmt = db.prepare(sqliteQuery);
+        const stmt = db!.prepare(sqliteQuery);
         const result = stmt.run(params);
         return [{ insertId: result.lastInsertRowid, affectedRows: result.changes, lastInsertRowid: result.lastInsertRowid }, []];
       }

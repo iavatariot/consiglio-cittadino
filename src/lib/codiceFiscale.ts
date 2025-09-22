@@ -103,7 +103,6 @@ const COMUNI_ITALIANI: { [key: string]: string } = {
   'COSENZA': 'D086',
   'COMO': 'C933',
   'VIGEVANO': 'L872',
-  'LIVORNO': 'E625',
   'BUSTO ARSIZIO': 'B300',
   'SAN SEVERO': 'I158',
   'VARESE': 'L682',

@@ -1,12 +1,12 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { Check, Copy, Download, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { useAuth } from '../../contexts/AuthContext';
 
-export default function SuccessPage() {
+function SuccessPageContent() {
   const searchParams = useSearchParams();
   const { user, isAuthenticated } = useAuth();
   const [copied, setCopied] = useState(false);
@@ -259,5 +259,13 @@ export default function SuccessPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function SuccessPage() {
+  return (
+    <Suspense fallback={<div>Caricamento...</div>}>
+      <SuccessPageContent />
+    </Suspense>
   );
 }

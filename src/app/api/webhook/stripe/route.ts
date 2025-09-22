@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { stripe } from '../../../../../lib/stripe';
-import { pool } from '../../../../../lib/database';
-import { setUserAsFounder, removeFounderStatus } from '../../../../../lib/auth';
-import { emailService } from '../../../../../lib/emailService';
+import { stripe } from '@/lib/stripe';
+import { pool } from '@/lib/database';
+import { setUserAsFounder, removeFounderStatus } from '@/lib/auth';
+import { emailService } from '@/lib/emailService';
 import Stripe from 'stripe';
 
 export async function POST(req: NextRequest) {

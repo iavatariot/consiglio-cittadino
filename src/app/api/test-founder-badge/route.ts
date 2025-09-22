@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { pool } from '../../../../lib/database';
-import { verifySession, setUserAsFounder } from '../../../../lib/auth';
+import { pool } from '@/lib/database';
+import { verifySession, setUserAsFounder } from '@/lib/auth';
 
 export async function POST(request: NextRequest) {
   try {

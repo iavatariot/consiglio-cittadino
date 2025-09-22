@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getUserByEmail, createEmailVerificationToken } from '../../../../../lib/auth';
-import { emailService } from '../../../../../lib/emailService';
-import { rateLimiter, getClientIP } from '../../../../../lib/rateLimiter';
+import { getUserByEmail, createEmailVerificationToken } from '@/lib/auth';
+import { emailService } from '@/lib/emailService';
+import { rateLimiter, getClientIP } from '@/lib/rateLimiter';
 
 export async function POST(request: NextRequest) {
   try {

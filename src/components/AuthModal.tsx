@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { X, Eye, EyeOff, User, Mail, Lock, Calendar, CreditCard, MapPin } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
-import { verificaCodiceFiscale, getComuniSupportati } from '../lib/codiceFiscale';
+import { verificaCodiceFiscale, getComuniSupportati } from '@/lib/codiceFiscale';
 
 interface AuthModalProps {
   isOpen: boolean;

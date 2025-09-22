@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getUserWithPasswordByEmail, verifyPassword, createSession } from '../../../../../lib/auth';
-import { rateLimiter, getClientIP } from '../../../../../lib/rateLimiter';
+import { getUserWithPasswordByEmail, verifyPassword, createSession } from '@/lib/auth';
+import { rateLimiter, getClientIP } from '@/lib/rateLimiter';
 
 export async function POST(request: NextRequest) {
   try {

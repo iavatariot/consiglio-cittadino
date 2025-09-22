@@ -1,10 +1,10 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { AlertTriangle, CheckCircle, XCircle, Mail, ArrowLeft } from 'lucide-react';
 
-export default function DeleteAccountPage() {
+function DeleteAccountPageContent() {
   const [status, setStatus] = useState<'loading' | 'success' | 'error' | 'confirm'>('loading');
   const [message, setMessage] = useState('');
   const [userInfo, setUserInfo] = useState<any>(null);
@@ -222,5 +222,13 @@ export default function DeleteAccountPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function DeleteAccountPage() {
+  return (
+    <Suspense fallback={<div>Caricamento...</div>}>
+      <DeleteAccountPageContent />
+    </Suspense>
   );
 }

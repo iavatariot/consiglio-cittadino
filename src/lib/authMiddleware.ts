@@ -1,5 +1,5 @@
 import { NextRequest } from 'next/server';
-import { getSessionByToken, User } from '../../../lib/auth';
+import { getSessionByToken, User } from '@/lib/auth';
 
 export interface AuthenticatedRequest extends NextRequest {
   user?: User;

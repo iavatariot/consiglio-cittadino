@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
-import { pool } from '../../../../../lib/database';
-import { stripe } from '../../../../../lib/stripe';
+import { pool } from '@/lib/database';
+import { stripe } from '@/lib/stripe';
 
 // Funzione per recuperare dati reali da Stripe
 async function getStripeData() {

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { verifySession, setUserAsFounder } from '../../../../../lib/auth';
-import { stripe } from '../../../../../lib/stripe';
+import { verifySession, setUserAsFounder } from '@/lib/auth';
+import { stripe } from '@/lib/stripe';
 
 export async function GET(request: NextRequest) {
   try {

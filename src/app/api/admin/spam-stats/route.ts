@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { rateLimiter } from '../../../../../lib/rateLimiter';
+import { rateLimiter } from '@/lib/rateLimiter';
 
 export async function GET(request: NextRequest) {
   try {

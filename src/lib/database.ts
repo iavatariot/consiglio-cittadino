@@ -1,5 +1,5 @@
 // Usa SQLite per persistenza locale (perfetto per sviluppo e deploy semplici)
-import { pool } from '../src/lib/database-sqlite';
+import { pool } from './database-sqlite';
 export { pool };
 
 // Configurazione MySQL per produzione (opzionale per il futuro)
