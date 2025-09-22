@@ -13,7 +13,7 @@ export interface EmailConfig {
 }
 
 export class EmailService {
-  private transporter: nodemailer.Transporter;
+  private transporter!: nodemailer.Transporter;
 
   constructor(config?: EmailConfig) {
     // Se non è presente una configurazione, usa un transporter di test
