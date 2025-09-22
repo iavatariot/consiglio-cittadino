@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
       email,
       first_name,
       last_name,
-      codice_fiscale
+      fiscal_code: codice_fiscale
     });
 
     if (spamCheck.isSpam) {
