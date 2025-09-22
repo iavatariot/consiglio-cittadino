@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
       }
     };
 
-    const plan = pricing[planType];
+    const plan = pricing[planType as keyof typeof pricing];
 
     // Create Stripe checkout session
     const session = await stripe.checkout.sessions.create({

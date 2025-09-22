@@ -135,9 +135,9 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
 }
 
 async function handlePaymentSucceeded(invoice: Stripe.Invoice) {
-  if (invoice.subscription) {
+  if ((invoice as any).subscription) {
     // Rinnovo abbonamento
-    const subscriptionId = invoice.subscription as string;
+    const subscriptionId = (invoice as any).subscription as string;
 
     await pool.execute(
       'UPDATE subscriptions SET status = ? WHERE stripe_subscription_id = ?',

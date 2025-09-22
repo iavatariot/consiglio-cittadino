@@ -58,9 +58,9 @@ export async function GET(request: NextRequest) {
               amount: amount,
               currency: currency,
               interval: interval,
-              current_period_start: new Date(subscription.current_period_start * 1000),
-              current_period_end: new Date(subscription.current_period_end * 1000),
-              created: new Date(subscription.created * 1000)
+              current_period_start: new Date((subscription as any).current_period_start * 1000),
+              current_period_end: new Date((subscription as any).current_period_end * 1000),
+              created: new Date((subscription as any).created * 1000)
             });
 
             console.log(`Abbonamento trovato: ${subscription.id} - ${amount/100} ${currency}/${interval}`);

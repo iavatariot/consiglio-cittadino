@@ -68,8 +68,8 @@ export async function POST(request: NextRequest) {
               amount,
               currency,
               'active',
-              new Date(subscription.current_period_start * 1000).toISOString(),
-              new Date(subscription.current_period_end * 1000).toISOString()
+              new Date((subscription as any).current_period_start * 1000).toISOString(),
+              new Date((subscription as any).current_period_end * 1000).toISOString()
             ]
           );
         }

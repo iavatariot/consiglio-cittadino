@@ -94,7 +94,7 @@ export default function AuthModal({ isOpen, onClose, initialMode = 'login' }: Au
       });
     } else {
       // Check if it's an email verification error
-      if (result.error?.includes('Email non verificata') || result.code === 'EMAIL_NOT_VERIFIED') {
+      if (result.error?.includes('Email non verificata') || (result as any).code === 'EMAIL_NOT_VERIFIED') {
         setShowResendVerification(true);
         setResendEmail(formData.email);
       }
