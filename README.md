@@ -2,12 +2,16 @@
 
 Una piattaforma web completa per **Consiglio Cittadino**, la democrazia digitale per l'Italia del futuro.
 
+## 📝 Licenza
+
+Questo progetto è licenziato sotto **GPL V3** - vedi il file [LICENSE](LICENSE) per dettagli.
+
 ## 🌟 Panoramica
 
 Consiglio Cittadino è una piattaforma dimostrativa che presenta il concept di democrazia digitale attraverso:
 
 - **Demo Interattiva**: Simulazione completa delle funzionalità principali
-- **Libro Digitale**: Manifesto completo con 8 capitoli
+- **Libro Digitale**: Manifesto completo con 17 capitoli
 - **Sistema di Abbonamenti**: Raccolta fondi per lo sviluppo
 - **Contatori Live**: Statistiche aggiornate in tempo reale
 - **Design Responsive**: Ottimizzato per tutti i dispositivi
@@ -106,26 +110,6 @@ npm run build
 npm start
 ```
 
-## 📁 Struttura Progetto
-
-```
-src/
-├── app/                    # App Router (Next.js 13+)
-│   ├── demo/              # Demo interattiva
-│   ├── info/              # Libro digitale
-│   ├── libro/             # Pagina libro Amazon
-│   ├── contatti/          # Form contatti
-│   ├── abbonamenti/       # Sistema sottoscrizioni
-│   └── page.tsx           # Homepage
-├── components/            # Componenti riutilizzabili
-│   ├── Header.tsx         # Navigazione principale
-│   └── Footer.tsx         # Footer sito
-├── hooks/                 # Custom React hooks
-│   └── useLiveCounters.ts # Hook contatori live
-├── lib/                   # Utilità e servizi
-│   └── liveCounters.ts    # Servizio contatori tempo reale
-└── types/                 # Type definitions TypeScript
-```
 
 ## 🎨 Design System
 
@@ -147,13 +131,6 @@ src/
 - NPM 9+
 - TypeScript 5+
 
-### Variabili Ambiente
-```env
-# Opzionali per demo
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_key
-STRIPE_PUBLISHABLE_KEY=your_stripe_key
-```
 
 ## 📈 Metriche Success
 
@@ -171,7 +148,7 @@ STRIPE_PUBLISHABLE_KEY=your_stripe_key
 
 ## 🌍 Deployment
 
-### Vercel (Consigliato)
+### Vercel 
 ```bash
 # Deploy automatico da Git
 vercel --prod
@@ -206,15 +183,12 @@ Il progetto è **open source** e accoglie contributi:
 - **Testing**: Unit e integration tests
 - **Performance**: Ottimizzazioni velocità caricamento
 
-## 📝 Licenza
-
-Questo progetto è licenziato sotto **MIT License** - vedi il file [LICENSE](LICENSE) per dettagli.
 
 ## 📞 Supporto
 
 - **Email**: info@iavatar.info
-- **Website**: [consiglio-cittadino.vercel.app]
-- **Community**: Discord (link in arrivo)
+- **Website**: www.ilconsigliocittadino.it
+- **Community**: https://discord.gg/demDWVX2
 
 ## 🎯 Roadmap
 
@@ -231,6 +205,7 @@ Questo progetto è licenziato sotto **MIT License** - vedi il file [LICENSE](LIC
 - [ ] Database petizioni funzionante
 - [ ] API backend completa
 - [ ] Sistema di voto e validazione
+- [ ] integrazione autenticazione spid
 
 ### Fase 3 - Sistema Completo
 **Obiettivo: Espansione nazionale**
@@ -242,6 +217,6 @@ Questo progetto è licenziato sotto **MIT License** - vedi il file [LICENSE](LIC
 
 ---
 
-**Sviluppato con ❤️ dal team [iavatar.info](https://iavatar.info)**
+**Sviluppato con ❤️ dal team www.iavatar.info**
 
 *Tecnologia per il bene comune*
