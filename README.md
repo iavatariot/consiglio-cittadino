@@ -2,9 +2,19 @@
 
 Una piattaforma web completa per **Consiglio Cittadino**, la democrazia digitale per l'Italia del futuro.
 
-## 📝 Licenza
+## 📋 Licenza GPL v3
 
-Questo progetto è licenziato sotto **GPL V3** - vedi il file [LICENSE](LICENSE) per dettagli.
+Questo progetto è distribuito sotto **GNU General Public License v3.0**:
+
+- ✅ Puoi usare, studiare e modificare il codice
+- ✅ Puoi distribuire copie modificate
+- ⚠️ **DEVI** mantenere la stessa licenza GPL v3
+- ⚠️ **DEVI** fornire il codice sorgente delle modifiche
+- ⚠️ Non puoi creare versioni proprietarie
+
+**Perché GPL v3?** Vogliamo che tutte le implementazioni di democrazia digitale rimangano aperte e trasparenti per il bene comune.
+
+Vedi [LICENSE](LICENSE) per il testo completo.
 
 ## 🌟 Panoramica
 
