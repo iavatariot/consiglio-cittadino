@@ -1,4 +1,4 @@
-# Consiglio Cittadino - Sito Web Demo
+# Consiglio Cittadino - Demo
 
 Una piattaforma web completa per **Consiglio Cittadino**, la democrazia digitale per l'Italia del futuro.
 
